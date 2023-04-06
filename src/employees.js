@@ -34,8 +34,7 @@ export async function deleteEmployee(req, res) {
 
 export async function updateEmployee(req, res) {
 
-  const id = {"_id": new ObjectId(req.params.id)};
-  console.log(id);
+  const id = {"_id": new ObjectId(req.params.docId)};
   const updatedValue = req.body;
   await coll.updateOne(id, {$set: updatedValue});
 

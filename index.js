@@ -15,6 +15,6 @@ app.use(express.json());
 app.post('/employees', addEmployee);
 app.get('/employees', getAllEmployees);
 app.delete('/employees/:id', deleteEmployee);
-app.patch('/employees/:id', updateEmployee);
+app.patch('/employees/:docId', updateEmployee);
 
 app.listen(PORT, console.log(`Listening on http://localhost:${PORT}...`));
